@@ -1,6 +1,7 @@
 import Dashboard from "views/Dashboard.js";
-import UserProfile from "views/UserProfile.js";
-import Typography from "views/Typography.js";
+import Courses from "views/Courses.js";
+import Files from "views/Files.js";
+import Submission from "views/Submission.js";
 
 const dashboardRoutes = [
   {
@@ -10,15 +11,21 @@ const dashboardRoutes = [
     layout: "/admin",
   },
   {
-    path: "/user",
-    name: "User Profile",
-    component: UserProfile,
+    path: "/courses",
+    name: "My Courses",
+    component: Courses,
     layout: "/admin",
   },
   {
-    path: "/typography",
-    name: "Typography",
-    component: Typography,
+    path: "/files",
+    name: "Files",
+    component: Files,
+    layout: "/admin",
+  },
+  {
+    path: "/submission",
+    name: "Submission",
+    component: Submission,
     layout: "/admin",
   },
 ];
