@@ -15,7 +15,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import {React, useState }from "react";
 import ReactDOM from "react-dom";
 
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
@@ -28,18 +28,21 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import AdminLayout from "layouts/Admin.js";
 import GuestLayout from "layouts/Guest.js";
-import App from "./App"
-
-ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.getElementById("root")
-);
 
 
-//<Switch>
-//<Route path="/admin" render={(props) => <GuestLayout {...props} />} />
-//{/* <Route path="/admin" render={(props) => <AdminLayout {...props} />} /> */}
-//<Redirect from="/" to="/admin/dashboard" />
-//</Switch>
+function App(){
+    const [username, setUsername] = useState("")
+    const [password, setPassword] = useState("")
+    const [user, setUser] = useState("")
+
+    return(
+        <Switch>
+            {/* <Route path="/admin" render={(props) => <GuestLayout {...props} />} /> */}
+            <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
+            <Redirect from="/" to="/admin/dashboard" />
+        </Switch>
+    );
+
+}
+
+export default App;
