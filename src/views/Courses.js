@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 // react-bootstrap components
 import {
   Card,
@@ -6,27 +6,30 @@ import {
   Row,
   Col,
 } from "react-bootstrap";
+import CourseDetails from '../components/CourseDetails/CourseDetails'
 
 function Courses() {
+
   return (
     <>
       <Container fluid>
         <Row>
           <Col lg="3" sm="6">
-            <Card className="card-stats">
-              <Card.Body>
-                <Row>
-                    <div className="numbers">
-                      <Card.Title as="h4">ECONOMICS</Card.Title>
+                <Card className="card-stats">
+                <Card.Body>
+                    <Row>
+                        <div className="numbers">
+                        <Card.Title as="h4">ECONOMICS</Card.Title>
+                        </div>
+                </Row>
+                </Card.Body>
+                <Card.Footer>
+                    <hr></hr>
+                    <div className="stats">
+                        {CourseDetails("ECONOMICS")}
                     </div>
-              </Row>
-              </Card.Body>
-              <Card.Footer>
-                <hr></hr>
-                <div className="stats">
-                </div>
-              </Card.Footer>
-            </Card>
+                </Card.Footer>
+                </Card>
           </Col>
           <Col lg="3" sm="6">
             <Card className="card-stats">
@@ -40,14 +43,15 @@ function Courses() {
               <Card.Footer>
                 <hr></hr>
                 <div className="stats">
+                {CourseDetails("CHEMISTRY")}
                 </div>
               </Card.Footer>
             </Card>
           </Col>
         </Row>
-
       </Container>
     </>
+
   );
 }
 
