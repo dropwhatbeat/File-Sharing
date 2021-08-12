@@ -21,7 +21,7 @@ import { useLocation } from "react-router-dom";
 import { Navbar, Container, Nav, Button } from "react-bootstrap";
 import routes from "routes.js";
 
-function Header() {
+function Header(props) {
   const location = useLocation();
   const mobileSidebarToggle = (e) => {
     e.preventDefault();
@@ -34,6 +34,12 @@ function Header() {
     };
     document.body.appendChild(node);
   };
+
+  function handleLogOut (event){
+    console.log("log out attempt")
+    props.onLogOut()
+    event.preventDefault();
+  }
 
   const getBrandText = () => {
     for (let i = 0; i < routes.length; i++) {
@@ -89,7 +95,7 @@ function Header() {
                 href="#pablo"
                 onClick={(e) => e.preventDefault()}
               >
-                <span className="no-icon">Log out</span>
+                <span className="no-icon" onClick={handleLogOut}>Log out</span>
               </Nav.Link>
             </Nav.Item>
           </Nav>

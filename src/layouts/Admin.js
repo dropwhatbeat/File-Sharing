@@ -23,7 +23,7 @@ import Sidebar from "components/Sidebar/Sidebar";
 
 import routes from "routes.js";
 
-function Admin() {
+function Admin(props) {
   const [image, setImage] = React.useState("black");
   const [color, setColor] = React.useState("black");
   const [hasImage, setHasImage] = React.useState(true);
@@ -57,12 +57,18 @@ function Admin() {
       element.parentNode.removeChild(element);
     }
   }, [location]);
+
+  function handleLogOut(){
+    console.log("log out reaches admin level")
+    props.onLogOut();
+  }
+
   return (
     <>
       <div className="wrapper">
         <Sidebar color={color} image={hasImage ? image : ""} routes={routes} />
         <div className="main-panel" ref={mainPanel}>
-          <AdminNavbar />
+          <AdminNavbar onLogOut={handleLogOut} />
           <div className="content">
             <Switch>{getRoutes(routes)}</Switch>
           </div>

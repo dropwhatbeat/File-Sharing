@@ -27,21 +27,32 @@ import "./assets/css/demo.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import AdminLayout from "layouts/Admin.js";
-import GuestLayout from "layouts/Guest.js";
-
+import LoginPage from "views/LoginPage";
 
 function App(){
-    const [username, setUsername] = useState("")
-    const [password, setPassword] = useState("")
     const [user, setUser] = useState("")
 
-    return(
-        <Switch>
-            {/* <Route path="/admin" render={(props) => <GuestLayout {...props} />} /> */}
-            <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
-            <Redirect from="/" to="/admin/dashboard" />
-        </Switch>
-    );
+    function handleFormSubmit(userEmail) {
+        setUser(userEmail)
+    }
+
+    function handleLogOut(){
+        setUser("")
+    }
+
+    if (user === ""){
+        return (
+            <LoginPage onChange={handleFormSubmit}/>
+        );
+    } else if (user === "bob@ipes.com"){
+        return(
+            <Switch>
+                {/* <Route path="/admin" render={(props) => <AdminLayout {...props} />} /> */}
+                <Route path="/admin" render={(props) => <AdminLayout onLogOut={handleLogOut} />} />
+                <Redirect from="/" to="/admin/dashboard" />
+            </Switch>
+        );
+    }
 
 }
 
