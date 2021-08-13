@@ -1,4 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
+import Tabs from 'react-bootstrap/Tabs';
+import Tab from 'react-bootstrap/Tab'
 
 // react-bootstrap components
 import {
@@ -9,6 +11,7 @@ import {
 } from "react-bootstrap";
 
 function Files() {
+
   return (
     <>
       <Container fluid>
@@ -16,15 +19,16 @@ function Files() {
           <Col md="12">
             <Card>
               <Card.Header>
-                <Card.Title as="h4">Download Your Files Here</Card.Title>
+              <Tabs defaultActiveKey="econs" id="uncontrolled-tab-example" className="mb-3">
 
-              </Card.Header>
-              <Card.Footer>
+  <Tab eventKey="econs" title="Economics" onSelect>
+  <Card.Title as="h4">Download Your Files Here</Card.Title>
+  <Card.Footer>
                 <hr></hr>
                 <div className="stats">
                 <Card.Title as="h4">
                 <a href="http://bafybeicea47cjq4jotade5aq2knav3ocwlxsi2nzi2cmypsrfqbcz4xlum.ipfs.localhost:8080/" download target="_blank">
-                  Lecture Notes 1
+                  Intro to Econs.pdf
                 </a>
                 </Card.Title>
                 <Card.Title as="h4">
@@ -34,6 +38,25 @@ function Files() {
                 </Card.Title>
                 </div>
               </Card.Footer>
+  </Tab>
+  <Tab eventKey="chem" title="Chemistry">
+  <Card.Title as="h4">Download Your Files Here</Card.Title>
+  <Card.Footer>
+                <hr></hr>
+                <div className="stats">
+                <Card.Title as="h4">
+                <a href="http://bafybeicea47cjq4jotade5aq2knav3ocwlxsi2nzi2cmypsrfqbcz4xlum.ipfs.localhost:8080/" download target="_blank">
+                  lecture1a.ppt
+                </a>
+                </Card.Title>
+                </div>
+              </Card.Footer>
+  </Tab>
+</Tabs>
+
+
+              </Card.Header>
+
             </Card>
           </Col>
         </Row>
