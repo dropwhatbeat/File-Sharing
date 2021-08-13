@@ -10,8 +10,8 @@ const CourseDetails = (subject) => {
 
   return (
     <>
-      <Button variant="light" onClick={handleShow}>
-        Description
+      <Button variant="light" size = 'sm' onClick={handleShow}>
+        Course Description
       </Button>
 
       <Modal show={show} onHide={handleClose} size="lg" backdrop="static">

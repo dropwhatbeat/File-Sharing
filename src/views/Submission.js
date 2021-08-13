@@ -74,12 +74,14 @@ function Submission() {
           <Col md="12">
             <Card>
               <Card.Header>
-                <Card.Title as="h4">Submission</Card.Title>
+                <Card.Title as="h4">Submit your Assignments</Card.Title>
               </Card.Header>
 
               <Card.Footer>
                 <hr></hr>
+                <Card.Title as="h4">
                 <div className="stats">
+
                 <Form onSubmit={submitHandler}>
                   <Form.Group controlId="formFile" className="mb-3">
                     <Form.Label>Input file</Form.Label>
@@ -91,7 +93,9 @@ function Submission() {
                 </Form>
                 <h4>file hash</h4>
                 <p>{fileContent.path}</p>
+
                 </div>
+                </Card.Title>
               </Card.Footer>
             </Card>
           </Col>
