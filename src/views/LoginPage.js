@@ -14,6 +14,8 @@ function LoginPage(props) {
         email:"",
         password:""
     });
+    
+    const [ userPass, setUserPass] = useState("")
 
     function handleChange(event){
         const target = event.target;
@@ -29,17 +31,35 @@ function LoginPage(props) {
     function handleSubmit(event){
         if ( userDeed.email == "bob@ipes.com" && userDeed.password == "admin"){
             props.onChange(userDeed.email);
+            setUserPass("right")
             console.log(`${userDeed.email} successfully logged in`)
         } else {
+            setUserPass("wrong")
             console.log("wrong email or password")
         }
         event.preventDefault();
+    }
+
+    function handleAlert(props) {
+        if (props.userPass == "wrong"){
+            return (
+                <Alert variant="danger" onClose={() => setShow(false)} dismissible>
+                  <Alert.Heading>It seems like either your username or password is wrong</Alert.Heading>
+                  <p>
+                    Please use "bob@ipes.com" for username and "admin" for password
+                  </p>
+                </Alert>
+            );
+        }
     }
 
     return (
         <Container>
             <Row className="align-items-center">
                 <h1>Welcome to Inter-Planetary Education System</h1>
+            </Row>
+            <Row>
+                <handleAlert userPass={userPass}/>
             </Row>
             <Row className="align-items-center">
                 <h1></h1>
