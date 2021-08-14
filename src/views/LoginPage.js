@@ -43,10 +43,10 @@ function LoginPage(props) {
 
     return (
         <Container>
-            <Row className="align-items-center">
+            <Row className = "justify-content-center">
                 <h1>Welcome to Inter-Planetary Education System</h1>
                 { userPass == "wrong" && 
-                    <Alert variant="danger" onClose={() => setUserPass("")} dismissible>
+                    <Alert variant="danger">
                         <Alert.Heading>It seems like either your username or password is wrong</Alert.Heading>
                         <p>
                         Please use "bob@ipes.com" for username and "admin" for password
