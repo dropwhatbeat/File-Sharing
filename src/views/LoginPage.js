@@ -39,8 +39,12 @@ function LoginPage(props) {
     return (
         <Container>
             <Row className="align-items-center">
-                <h1>Welcome to the Inter-Planetary Education system</h1>
+                <h1>Welcome to Inter-Planetary Education System</h1>
             </Row>
+            <Row className="align-items-center">
+                <h1></h1>
+            </Row>
+            
             <Row>
                 <Col></Col>
                 <Col>
