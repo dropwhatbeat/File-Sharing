@@ -5,7 +5,8 @@ import {
     Button,
     Container,
     Row,
-    Col
+    Col,
+    Alert
   } from "react-bootstrap";
 
 function LoginPage(props) {
@@ -40,26 +41,18 @@ function LoginPage(props) {
         event.preventDefault();
     }
 
-    function handleAlert(props) {
-        if (props.userPass == "wrong"){
-            return (
-                <Alert variant="danger" onClose={() => setShow(false)} dismissible>
-                  <Alert.Heading>It seems like either your username or password is wrong</Alert.Heading>
-                  <p>
-                    Please use "bob@ipes.com" for username and "admin" for password
-                  </p>
-                </Alert>
-            );
-        }
-    }
-
     return (
         <Container>
             <Row className="align-items-center">
                 <h1>Welcome to Inter-Planetary Education System</h1>
-            </Row>
-            <Row>
-                <handleAlert userPass={userPass}/>
+                { userPass == "wrong" && 
+                    <Alert variant="danger" onClose={() => setUserPass("")} dismissible>
+                        <Alert.Heading>It seems like either your username or password is wrong</Alert.Heading>
+                        <p>
+                        Please use "bob@ipes.com" for username and "admin" for password
+                        </p>
+                    </Alert>
+                }
             </Row>
             <Row className="align-items-center">
                 <h1></h1>
