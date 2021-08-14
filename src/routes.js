@@ -24,7 +24,7 @@ const dashboardRoutes = [
   },
   {
     path: "/ipfs_connect",
-    name: "ipfs_connect",
+    name: "IPFS_Connect",
     component: ipfs_connect,
     layout: "/admin",
   },
