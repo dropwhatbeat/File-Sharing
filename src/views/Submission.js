@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 const { create: ipfsClient } = require('ipfs-http-client')
 const stringToUse = 'hello world from webpacked IPFS'
+import Tabs from 'react-bootstrap/Tabs';
+import Tab from 'react-bootstrap/Tab'
 
 // react-bootstrap components
 import {
@@ -74,12 +76,22 @@ function Submission() {
           <Col md="12">
             <Card>
               <Card.Header>
-                <Card.Title as="h4">Submission</Card.Title>
+              <Tabs defaultActiveKey="econs" id="uncontrolled-tab-example" className="mb-3">
+
+                <Tab eventKey="econs" title="Economics">
+                </Tab>
+                <Tab eventKey="chem" title="Chemistry">
+                </Tab>
+                </Tabs>
+                
+                <Card.Title as="h4">Submit your Assignments</Card.Title>
               </Card.Header>
 
               <Card.Footer>
                 <hr></hr>
+                <Card.Title as="h4">
                 <div className="stats">
+
                 <Form onSubmit={submitHandler}>
                   <Form.Group controlId="formFile" className="mb-3">
                     <Form.Label>Input file</Form.Label>
@@ -91,7 +103,9 @@ function Submission() {
                 </Form>
                 <h4>file hash</h4>
                 <p>{fileContent.path}</p>
+
                 </div>
+                </Card.Title>
               </Card.Footer>
             </Card>
           </Col>

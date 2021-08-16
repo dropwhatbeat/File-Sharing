@@ -5,7 +5,8 @@ import {
     Button,
     Container,
     Row,
-    Col
+    Col,
+    Alert
   } from "react-bootstrap";
 
 function LoginPage(props) {
@@ -14,6 +15,8 @@ function LoginPage(props) {
         email:"",
         password:""
     });
+    
+    const [ userPass, setUserPass] = useState("")
 
     function handleChange(event){
         const target = event.target;
@@ -29,8 +32,10 @@ function LoginPage(props) {
     function handleSubmit(event){
         if ( userDeed.email == "bob@ipes.com" && userDeed.password == "admin"){
             props.onChange(userDeed.email);
+            setUserPass("right")
             console.log(`${userDeed.email} successfully logged in`)
         } else {
+            setUserPass("wrong")
             console.log("wrong email or password")
         }
         event.preventDefault();
@@ -38,9 +43,21 @@ function LoginPage(props) {
 
     return (
         <Container>
-            <Row className="align-items-center">
-                <h1>Welcome to the Inter-Planetary Education system</h1>
+            <Row className = "justify-content-center">
+                <h1>Welcome to Inter-Planetary Education System</h1>
+                { userPass == "wrong" && 
+                    <Alert variant="danger">
+                        <Alert.Heading>It seems like either your username or password is wrong</Alert.Heading>
+                        <p>
+                        Please use "bob@ipes.com" for username and "admin" for password
+                        </p>
+                    </Alert>
+                }
             </Row>
+            <Row className="align-items-center">
+                <h1></h1>
+            </Row>
+            
             <Row>
                 <Col></Col>
                 <Col>
