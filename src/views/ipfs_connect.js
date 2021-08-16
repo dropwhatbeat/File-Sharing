@@ -55,7 +55,7 @@ class App extends React.Component {
           <p>Your ID is <strong>{this.state.id}</strong></p>
           <p>Your IPFS version is <strong>{this.state.version}</strong></p>
           <p>Your IPFS protocol version is <strong>{this.state.protocol_version}</strong></p>
-          <div>
+          {/* <div>
             <div>
               Added a file! <br />
               {this.state.added_file_hash}
@@ -64,7 +64,7 @@ class App extends React.Component {
               Contents of this file: <br />
               {this.state.added_file_contents}
             </div>
-          </div>
+          </div> */}
         </div>
       )
     }
