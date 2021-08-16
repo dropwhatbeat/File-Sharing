@@ -18,7 +18,7 @@ function Submission() {
   const [file, setUploadFile] = useState();
   const [fileContent, setFileContent] = useState({content:"",
                                                   cid:"",
-                                                  path:"no thing yet"});
+                                                  path:""});
 
   
   async function connect (fileData) {
