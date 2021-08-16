@@ -40,29 +40,29 @@ function Files() {
   const allClasses = [
     {
       title: "Economics",
-      indexFile: "https://ipfs.io/ipfs/QmedvWohNz7hQC2GLY4U2KMCenCK47iaCvSFnyX6HtuPoe?filename=some_other_md_file.md", 
+      indexFile: "https://ipfs.io/ipfs/bafybeihse66exbkmnv7cg6wyml3yznb63ckmanohvyeth4ta47yjn4aehe?filename=some_other_md_file.md", 
       files: [
         {
-          url: "https://ipfs.io/ipfs/Qmc3eRLLNyz9HkRLLqPKcF1KtuzhMNiaoebAsgGxv6BQML?filename=SCION-book.pdf",
+          url: "https://ipfs.io/ipfs/bafybeiglvbvi5azsnbcruo3y7d6yi6otnsi4li3uo4u5wqxv7agjnghic4?filename=SCION-book.pdf",
           title: "Lecture Book" 
         }
       ]
     },
      {
       title: "Chemistry",
-      indexFile: "https://ipfs.io/ipfs/QmTebPEycYorKbSMNXaxYrbiMkyRduQgXBNNogAmv2WLYD?filename=some_md_file.md", 
+      indexFile: "https://ipfs.io/ipfs/bafybeico4mqrvwsxmh5cuikktizbwf2inzqd643rdnxbdbpsuaezlqt66y?filename=some_md_file.md", 
       files: [
         {
-          url: "https://ipfs.io/ipfs/QmeV7EHf8C2LniXiUcXdpe6SdkiZRa8ESqWbHiNADfTSfS?filename=delete.xlsx",
+          url: "https://ipfs.io/ipfs/bafybeihp4wp3zbz5eahkiqrljdbbflfdw5bsteth4gnfrujm5ywmuks25e?filename=delete.xlsx",
           title: "Spreadsheet" 
         },
         {
-          url: "https://ipfs.io/ipfs/QmVLUm5jyZWCNzGxuCBUGkjZTSYtCq3sFkQZJHT1dP8vGL?filename=Delete.docx",
+          url: "https://ipfs.io/ipfs/bafybeidh62htsalm36x7ogcnuynzzdefhpk4uoq2r3bbw6grkzwioqd74u?filename=Delete.docx",
           title: "My awesome Word File" 
         },
 
         {
-          url: "https://ipfs.io/ipfs/QmQk9H5RANvbXDukQRWHVRRrNMa1aoigsbVVEKiTBkstV7?filename=delete.blend",
+          url: "https://ipfs.io/ipfs/bafybeibdxqepam6f3ctlgw2v6hwgshynoblbd7gp4cbtjv5illvxhb2pji?filename=delete.blend",
           title: "Blender Template" 
         }
       ]
