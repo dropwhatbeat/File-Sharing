@@ -10,7 +10,7 @@ const MdFile = ({url}) => {
     });
 
     useEffect(handler, [url]);
-
+    console.log("Hello");
 
     return <ReactMarkdown
             skipHtml
