@@ -44,7 +44,7 @@ function LoginPage(props) {
     return (
         <Container>
             <Row className = "justify-content-center">
-                <h1>Welcome to Inter-Planetary Education System</h1>
+                <h1>Welcome to InterPlanetary Education System</h1>
                 { userPass == "wrong" && 
                     <Alert variant="danger">
                         <Alert.Heading>It seems like either your username or password is wrong</Alert.Heading>
