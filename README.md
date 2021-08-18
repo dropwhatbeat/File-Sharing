@@ -1,6 +1,23 @@
 ![IPES](static_assets/IPES.jpg)
 Mock up of a education portal that uses decentralised web technology
 
+## Table of Contents <!-- omit in toc -->
+
+- [Getting started](#Getting-started)
+  - [Configuring local IPFS Daemon](#Configuring-local-IPFS-Daemon)
+  - [Configuring IPFS Companion](#Configuring-IPFS-Companion)
+- [Project Description](#Project-Description)
+  - [Inspiration](#Inspiration)
+  - [Whats it does](#Whats-it-does)
+  - [How we built it](#How-we-built-it)
+  - [Challenges we ran into](#Challenges-we-ran-into)
+  - [Accomplishments that we're proud of](#Accomplishments-that-we're-proud-of)
+  - [What we learned](#What-we-learned)
+  - [What's next for InterPlanetary File System](#What's-next-for-InterPlanetary-File-System)
+  
+
+## Getting Started <!-- omit in toc -->
+
 # Getting started
 This github repository contains a proof of concept education platform that replaces the content download and upload with IPFS equivalent. An instance of this project is deployed on [Fleek](https://fleek.co/) and can be access via this url [https://steep-sound-9969.on.fleek.co/](https://steep-sound-9969.on.fleek.co/).
 
@@ -30,7 +47,7 @@ Once a local IPFS daemon is successfully running on your computer, you will have
 ```
 After editing the configuration file, restart the IPFS daemon for changes to take effect.
 
-## Configuring local IPFS Companion
+## Configuring IPFS Companion
 To get IPFS companion to route all IPFS traffic through the local node, the following changes should be done to the default IPFS companion app. At time of writing, the IPFS companion app is only available on:
 1. Firefox
 2. Firefox for Adroid 
